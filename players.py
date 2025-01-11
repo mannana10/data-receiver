@@ -32,7 +32,8 @@ def get_data (opt):
                        ORDER BY score DESC
                        LIMIT 3""")
         data = cursor.fetchmany(3)
-
+    cursor.close()
+    connection.close()
     return data
 
 
